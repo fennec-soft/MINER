@@ -1,0 +1,43 @@
+{
+  "name": "MINER",
+  "version": "1.0.0",
+  "description": "MINER",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder"
+  },
+  "build": {
+    "appId": "com.fennec.MINER",
+    "productName": "MINER",
+    "directories": {
+      "output": "dist"
+    },
+    "win": {
+      "icon": "MINER.ico",
+      "target": [
+        "nsis"
+      ],
+      "publisherName": "Fennec Software"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "MINER"
+    }
+  },
+  "devDependencies": {
+    "electron": "^31.7.7",
+    "electron-builder": "^24.13.3",
+    "electron-rebuild": "^3.2.9"
+  },
+  "dependencies": {
+    "better-sqlite3": "^12.11.1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs"
+}
